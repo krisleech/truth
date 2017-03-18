@@ -1,0 +1,18 @@
+%h2 Questions
+
+%table.table
+  %thead
+    %tr
+      %th Question
+      %th Answers
+
+  %tbody
+    - @questions.each do |question|
+      %tr
+        %td= question.question_html
+        %td= question.answers.count
+        %td
+          = link_to 'Edit', edit_admin_question_path(question), class: 'btn btn-default'
+          = link_to 'Answers', admin_question_answers_path(question), class: 'btn btn-default'
+
+= link_to 'Add New Question', new_admin_question_path, class: 'btn btn-default'

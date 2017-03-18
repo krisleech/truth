@@ -1,0 +1,4 @@
+%h2 New Question
+
+= simple_form_for [:admin, @question] do |form|
+  = render partial: 'form', locals: { form: form }
