@@ -1,5 +1,5 @@
 module Admin
-  class AnswersController < ApplicationController
+  class AnswersController < BaseController
     def index
       @question = Question.find(params[:question_id])
       @answers = @question.answers.all
